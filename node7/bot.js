@@ -21,7 +21,6 @@ const uploaded = (err, data, response) => {
     status: "#codingrainbow live from node.js",
     media_ids: [id],
   };
-  console.log(data);
   T.post("statuses/update", tweet, tweeted);
 };
 
@@ -31,7 +30,6 @@ const processing = () => {
     encoding: "base64",
   };
   const b64 = fs.readFileSync(filename, params);
-  console.log(b64);
 
   T.post("media/upload", { media_data: b64 }, uploaded);
 };
@@ -43,5 +41,5 @@ const tweetIt = (txt) => {
   exec(command, processing);
 };
 
-tweetIt();
+// tweetIt();
 // setInterval(tweetIt, 1000 * 20);
