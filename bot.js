@@ -30,4 +30,4 @@ const tweetFact = () => {
 };
 
 // tweetFact();
-setInterval(tweetFact, 1000 * 60); // 1s 1m 1h 12h
+setInterval(tweetFact, 1000 * 60 * 60); // 1s 1m 1h 12h
