@@ -30,4 +30,4 @@ const tweetFact = () => {
 };
 
 tweetFact();
-setInterval(tweetFact, 1000 * 20);
+// setInterval(tweetFact, 1000 * 20);
