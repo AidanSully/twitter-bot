@@ -18,10 +18,10 @@ const tweetFact = () => {
   axios
     .get("https://uselessfacts.jsph.pl/random.json?language=en")
     .then((res) => {
-      console.log(res.data.text);
       const tweet = {
         status: `${res.data.text} #fact`,
       };
+      console.log(tweet);
       T.post("statuses/update", tweet, tweetComplete);
     })
     .catch((error) => {
