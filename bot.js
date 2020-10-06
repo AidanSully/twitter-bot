@@ -20,7 +20,7 @@ const tweetFact = () => {
     .then((res) => {
       console.log(res.data.text);
       const tweet = {
-        status: res.data.text,
+        status: `${res.data.text} #fact`,
       };
       T.post("statuses/update", tweet, tweetComplete);
     })
